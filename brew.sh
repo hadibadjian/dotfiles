@@ -58,6 +58,8 @@ brew install tree
 brew install webkit2png
 
 # Install apps
+brew install caskroom/cask/brew-cask
+
 brew cask install atom
 brew cask install firefox
 brew cask install google-chrome
