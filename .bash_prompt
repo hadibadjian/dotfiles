@@ -146,7 +146,6 @@ fi;
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${white}\]\$(short_pwd)"; # working directory
-PS1+=" "; # space separator
 PS1+="\[${green}\]\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
