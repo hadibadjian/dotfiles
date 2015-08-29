@@ -2,6 +2,8 @@
 
 Forked [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles).
 
+![prompt screen shot](https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/e35/c71.0.307.307/11821719_1607065079554863_1490092418_n.jpg)
+
 ## Additional Configurations
 
 ### Homebrew
