@@ -28,5 +28,7 @@ MarkdownEditing User Settings
 ### Xcode
 
 [Source Code Rro Font](https://github.com/adobe-fonts/source-code-pro)
+
 [SpaceGray Theme](https://github.com/zdne/spacegray-xcode)
+
 [Documenter](https://github.com/onevcat/VVDocumenter-Xcode)
