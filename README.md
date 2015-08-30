@@ -24,3 +24,9 @@ Useful Packages:
 
 MarkdownEditing User Settings
 [Markdown.sublime-settings](init/Markdown.sublime-settings)
+
+### Xcode
+
+[Source Code Rro Font](https://github.com/adobe-fonts/source-code-pro)
+[SpaceGray Theme](https://github.com/zdne/spacegray-xcode)
+[Documenter](https://github.com/onevcat/VVDocumenter-Xcode)
