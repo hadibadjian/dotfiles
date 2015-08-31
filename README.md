@@ -32,3 +32,7 @@ MarkdownEditing User Settings
 [SpaceGray Theme](https://github.com/zdne/spacegray-xcode)
 
 [Documenter](https://github.com/onevcat/VVDocumenter-Xcode)
+
+### MenuMeter
+
+[MenuMeter](http://www.ragingmenace.com/software/menumeters/index.html)
