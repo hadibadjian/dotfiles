@@ -12,6 +12,12 @@ Forked [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles).
 ### RVM
 `curl -sSL https://get.rvm.io | bash -s stable --ruby`
 
+Add the following to `~/.bash_profile`
+```
+# RVM
+source ~/.rvm/scripts/rvm
+```
+
 ### Sublime Packages
 
 Package Manager
