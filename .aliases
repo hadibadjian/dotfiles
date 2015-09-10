@@ -143,3 +143,4 @@ alias reload="exec $SHELL -l"
 # Xode & CocoaPods
 alias silly_xcode="rm -rf ~/Library/Developer/Xcode/DerivedData; xcodebuild clean;"
 alias silly_pods="rm -rf Pods; pod install --no-repo-update;"
+alias silly_pods_xplode="rm -rf ${HOME}/Library/Caches/CocoaPods; rm -rf Pods; pod install --verbose;"
