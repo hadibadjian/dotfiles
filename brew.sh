@@ -67,6 +67,7 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask install menubar-countdown
 brew cask install menumeters
+brew cask install provisioning
 brew cask install slack
 brew cask install sourcetree
 brew cask install sublime-text3
