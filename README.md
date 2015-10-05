@@ -37,7 +37,11 @@ MarkdownEditing User Settings
 
 [SpaceGray Theme](https://github.com/zdne/spacegray-xcode)
 
+Generate code documentation skeleton the easy way
 [Documenter](https://github.com/onevcat/VVDocumenter-Xcode)
+
+Filter Xcode console log using regular expression
+[MCLog](https://github.com/yuhua-chen/MCLog)
 
 ### MenuMeter
 
