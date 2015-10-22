@@ -33,15 +33,21 @@ MarkdownEditing User Settings
 
 ### Xcode
 
+#### Layout
 [Source Code Rro Font](https://github.com/adobe-fonts/source-code-pro)
 
 [SpaceGray Theme](https://github.com/zdne/spacegray-xcode)
 
-Generate code documentation skeleton the easy way
-[Documenter](https://github.com/onevcat/VVDocumenter-Xcode)
+#### Packages
+[Alcatraz](http://alcatraz.io)
 
-Filter Xcode console log using regular expression
+`curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh`
+
+[VVDocumenter-Xcode](https://github.com/onevcat/VVDocumenter-Xcode)
+
 [MCLog](https://github.com/yuhua-chen/MCLog)
+
+[GitDiff](https://github.com/johnno1962/GitDiff)
 
 ### MenuMeter
 
