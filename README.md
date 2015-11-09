@@ -26,7 +26,7 @@ import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7
 ```
 
 Useful Packages:
-`Alignment, All Autocomplete, ApplySyntax, BracketHighlighter, Case Conversion, Cucumber, Gherkin (Cucumber) Formatter, GitGutter, MarkdownEditing, MarkdownTOC, Pretty JSON, RSpec, Theme - Spacegray`
+`AdvancedNewFile, Alignment, All Autocomplete, ApplySyntax, BracketHighlighter, Case Conversion, Cucumber, Gherkin (Cucumber) Formatter, GitGutter, MarkdownEditing, MarkdownTOC, Pretty JSON, RSpec, SideBarEnhancements, Theme - Spacegray`
 
 MarkdownEditing User Settings
 [Markdown.sublime-settings](init/Markdown.sublime-settings)
