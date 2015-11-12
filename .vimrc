@@ -103,4 +103,6 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+	" Enable commit message spell check
+	autocmd FileType gitcommit setlocal spell
 endif
