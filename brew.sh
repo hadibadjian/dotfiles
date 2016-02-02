@@ -66,7 +66,9 @@ brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install menubar-countdown
-brew cask install menumeters
+# brew cask install menumeters
+# A port of menumeters for El Capitan
+brew cask install yujitach-menumeters
 brew cask install itsycal
 brew cask install provisioning
 brew cask install slack
