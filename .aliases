@@ -144,3 +144,17 @@ alias reload="exec $SHELL -l"
 alias silly_xcode="rm -rf ~/Library/Developer/Xcode/DerivedData; xcodebuild clean;"
 alias silly_pods="rm -rf Pods; pod install --no-repo-update;"
 alias silly_pods_xplode="rm -rf ${HOME}/Library/Caches/CocoaPods; rm -rf Pods; pod install --verbose;"
+
+# Pull Request Review
+function start_pr() {
+  git worktree add ../pull-request "origin/$1"
+  pushd ../pull-request
+}
+alias start_pr="start_pr"
+
+function end_pr() {
+  popd
+  rm -rf ../pull-request
+  git worktree prune
+}
+alias end_pr="end_pr"
