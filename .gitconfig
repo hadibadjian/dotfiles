@@ -130,6 +130,15 @@
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
 
+[diff "mobileprovision"]
+	# Thanks to https://gist.github.com/jmoody/20f5a36a8846982817be
+	textconv = "xcrun security cms -D -i"
+
+[diff "plist"]
+  # Thanks to https://gist.github.com/jmoody/20f5a36a8846982817be
+  textconv = plutil -convert xml1 -o -
+  cachetextconv = true
+
 [help]
 
 	# Automatically correct and execute mistyped commands

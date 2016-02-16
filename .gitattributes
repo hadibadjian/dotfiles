@@ -1,3 +1,7 @@
 # Automatically normalize line endings for all text-based files
 #* text=auto
 # Disabled because of https://github.com/mathiasbynens/dotfiles/issues/149 :(
+
+# MacOS Specific
+*.plist diff=plist
+*.mobileprovision diff=mobileprovision
