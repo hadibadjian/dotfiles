@@ -52,3 +52,4 @@ MarkdownEditing User Settings
 ### MenuMeter
 
 [MenuMeter](http://www.ragingmenace.com/software/menumeters/index.html)
+[MenuMeter El Capitan](https://github.com/yujitach/MenuMeters)
