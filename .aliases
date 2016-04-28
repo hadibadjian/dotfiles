@@ -149,6 +149,8 @@ alias silly_pods_xplode="rm -rf ${HOME}/Library/Caches/CocoaPods; rm -rf Pods; p
 function start_pr() {
   git worktree add ../pull-request "origin/$1"
   pushd ../pull-request
+  git checkout $1
+  git submodule update --init
 }
 alias start_pr="start_pr"
 
