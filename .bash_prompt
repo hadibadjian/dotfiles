@@ -99,6 +99,10 @@ short_pwd () {
   shopt "$NGV" nullglob # Reset nullglob in case this is being used as a function.
 }
 
+rvm_prompt() {
+  ~/.rvm/bin/rvm-prompt i v p g
+}
+
 if tput setaf 1 &> /dev/null; then
 	tput sgr0; # reset colors
 	bold=$(tput bold);
@@ -145,6 +149,7 @@ fi;
 
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
+PS1+="\[${purple}\]\$(rvm_prompt) ";
 PS1+="\[${white}\]\$(short_pwd)"; # working directory
 PS1+="\[${green}\]\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
