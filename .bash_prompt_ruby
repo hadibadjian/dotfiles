@@ -1,0 +1,7 @@
+rvm_prompt() {
+  ~/.rvm/bin/rvm-prompt i v p g
+}
+
+PS1+="\[${purple}\]\$(rvm_prompt)";
+PS1+=" \[${reset}\]";
+export PS1;
