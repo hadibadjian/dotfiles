@@ -1,4 +1,6 @@
+PS1="\[\033]0;\w\007\]";
+
 source ~/.bash_prompt_colors
-source ~/.bash_prompt_short
 source ~/.bash_prompt_ruby
+source ~/.bash_prompt_short
 source ~/.bash_prompt_git
