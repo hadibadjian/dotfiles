@@ -17,9 +17,9 @@ alias j="jobs"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+  colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+  colorflag="-G"
 fi
 
 # List all files colorized in long format
@@ -120,7 +120,7 @@ alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="lwp-request -m '$method'"
+  alias "$method"="lwp-request -m '$method'"
 done
 
 # Make Grunt print stack traces by default
@@ -146,17 +146,24 @@ alias silly_pods="rm -rf Pods; pod install --no-repo-update;"
 alias silly_pods_xplode="rm -rf ${HOME}/Library/Caches/CocoaPods; rm -rf Pods; pod install --verbose;"
 
 # Pull Request Review
-function start_pr() {
-  git worktree add ../pull-request "origin/$1"
-  pushd ../pull-request
-  git checkout $1
-  git submodule update --init
+base_path="/Users/HB/projects/pull-requests"
+start_pr() {
+  folder=`echo $1 | sed -r "s/\//\-/g"`
+  folder_path="${base_path}/${folder}"
+
+  git worktree add ${folder_path} "origin/${1}" &&
+  pushd ${folder_path} &&
+  git checkout $1 &&
+  git submodule update --init &&
+  echo "under review" >> "${base_path}/.${folder}"
 }
 alias start_pr="start_pr"
 
-function end_pr() {
-  popd
-  rm -rf ../pull-request
+end_pr() {
+  folder=${PWD}
+  rm "${base_path}/.${PWD##*/}" &&
+  popd &&
+  rm -rf ${folder} &&
   git worktree prune
 }
 alias end_pr="end_pr"
