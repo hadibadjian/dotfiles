@@ -142,28 +142,3 @@ alias reload="exec $SHELL -l"
 
 # Xode & CocoaPods
 alias silly_xcode="rm -rf ~/Library/Developer/Xcode/DerivedData; xcodebuild clean;"
-alias silly_pods="rm -rf Pods; pod install --no-repo-update;"
-alias silly_pods_xplode="rm -rf ${HOME}/Library/Caches/CocoaPods; rm -rf Pods; pod install --verbose;"
-
-# Pull Request Review
-base_path="/Users/HB/projects/pull-requests"
-start_pr() {
-  folder=`echo $1 | sed -r "s/\//\-/g"`
-  folder_path="${base_path}/${folder}"
-
-  git worktree add ${folder_path} "origin/${1}" &&
-  pushd ${folder_path} &&
-  git checkout $1 &&
-  git submodule update --init &&
-  echo "under review" >> "${base_path}/.${folder}"
-}
-alias start_pr="start_pr"
-
-end_pr() {
-  folder=${PWD}
-  rm "${base_path}/.${PWD##*/}" &&
-  popd &&
-  rm -rf ${folder} &&
-  git worktree prune
-}
-alias end_pr="end_pr"

@@ -244,3 +244,65 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function _checkout_usage() {
+  cat << HERE
+  checkout [OPTIONS]
+
+  OPTIONS
+  -b, --branch
+  -p, --path
+HERE
+}
+
+function _checkout_cleanup() {
+  unset branch
+  unset path
+}
+
+# `checkout` switches to the given git branch using worktree
+function checkout() {
+  while [[ "$#" -gt 0 ]]; do
+    case $1 in
+      -b|--branch)
+        branch="$2"
+        shift
+        shift
+        ;;
+      -p|--path)
+        path="$2"
+        shift
+        shift
+        ;;
+      *)
+        _checkout_usage
+        _checkout_cleanup
+        return
+        ;;
+    esac
+  done
+
+  if [[ -z $branch || -z $path ]]; then
+    _checkout_usage
+    _checkout_cleanup
+    return
+  fi
+
+  folder=`echo $branch | sed -r "s/\//\-/g"`
+  folder_path="$path/$folder"
+
+  git worktree add $path "origin/$branch" &&
+  pushd $path &&
+  git checkout $branch &&
+  git submodule update --init
+
+  _checkout_cleanup
+}
+
+# `abandon` removes the git worktree for the current path
+function abandon() {
+  folder=${PWD}
+  popd &&
+  rm -rf ${folder} &&
+  git worktree prune
+}
