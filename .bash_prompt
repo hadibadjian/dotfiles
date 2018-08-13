@@ -1,6 +1,10 @@
 PS1="\[\033]0;\w\007\]";
 
+PS1+="\n";
 source ~/.bash_prompt_colors
 source ~/.bash_prompt_ruby
-source ~/.bash_prompt_short
 source ~/.bash_prompt_git
+
+PS1+="\n";
+source ~/.bash_prompt_short
+PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
