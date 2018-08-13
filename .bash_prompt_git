@@ -50,6 +50,6 @@ prompt_changes() {
   fi;
 }
 
-PS1+="\[${violet}\]\$(prompt_branch_name)\[${blue}\]\$(prompt_changes) ";
+PS1+="\[${yellow}\]\$(prompt_branch_name)\[${cyan}\]\$(prompt_changes) ";
 PS1+="\[${reset}\]";
 export PS1;
