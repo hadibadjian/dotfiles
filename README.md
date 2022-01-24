@@ -1,9 +1,5 @@
 # Hadi's dotfiles
 
-Forked [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles).
-
-![prompt screen shot](https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/e35/c71.0.307.307/11821719_1607065079554863_1490092418_n.jpg)
-
 ## Prerequisites
 
 ### Homebrew
@@ -18,9 +14,13 @@ Add the following to `~/.extra`
 source ~/.rvm/scripts/rvm
 ```
 
+### NVM
+[Installation and Updating](https://github.com/nvm-sh/nvm#installing-and-updating)
+
 ## Installation
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you do not want or need. Do not blindly use my settings unless you know what that entails. Use at your own risk!
+
 
 ### Using Git and the bootstrap script
 
@@ -47,7 +47,7 @@ set -- -f; source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/hadibadjian/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE-MIT.txt}
+cd; curl -#L https://github.com/hadibadjian/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE-MIT.txt}
 ```
 
 To update later on, just run that command again.
@@ -70,10 +70,10 @@ My `~/.extra` looks something like this:
 
 ```bash
 # Git credentials
-GIT_AUTHOR_NAME="Hadi Badjian"
+GIT_AUTHOR_NAME="User Name"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="hadi@badjian.me"
+GIT_AUTHOR_EMAIL="user@example.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 git config --global credential.helper osxkeychain
@@ -81,17 +81,17 @@ git config --global credential.helper osxkeychain
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository.
 
-### Sensible OS X defaults
+### Sensible macOS defaults
 
-When setting up a new Mac, you may want to set some sensible OS X defaults:
+When setting up a new Mac, you may want to set some sensible macOS defaults:
 
 ```bash
-./.osx
+./.macos
 ```
 
 ### Install Homebrew formula
 
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formula (after installing Homebrew, of course):
+When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formula (after installing Homebrew, of course):
 
 ```bash
 ./brew.sh
@@ -111,27 +111,4 @@ Useful Packages:
 
 You may find these [MarkdownEditing User Settings](init/Markdown.sublime-settings) user settings helpful.
 
-### Xcode
-
-These are my preferences using Xcode IDE. Feel free to configure them however you prefer.
-
-#### Layout
-[Source Code Rro Font](https://github.com/adobe-fonts/source-code-pro)
-
-[SpaceGray Theme](https://github.com/zdne/spacegray-xcode)
-
-#### Package Manager and Useful Packages
-[Alcatraz](http://alcatraz.io)
-
-`curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh`
-
-[VVDocumenter-Xcode](https://github.com/onevcat/VVDocumenter-Xcode)
-
-[MCLog](https://github.com/yuhua-chen/MCLog)
-
-[GitDiff](https://github.com/johnno1962/GitDiff)
-
-### Additional References
-
-[MenuMeter](http://www.ragingmenace.com/software/menumeters/index.html)
-[MenuMeter El Capitan](https://github.com/yujitach/MenuMeters)
+Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
