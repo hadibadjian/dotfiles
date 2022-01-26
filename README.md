@@ -1,9 +1,12 @@
 # Hadi's dotfiles
 
-## Prerequisites
+## Preparation
+
+### Change Shell
+`chsh -s /bin/bash`
 
 ### Homebrew
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 ### RVM
 `curl -sSL https://get.rvm.io | bash -s stable --ruby`

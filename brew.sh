@@ -24,7 +24,7 @@ brew install findutils
 brew install gnu-sed --with-default-names
 # Install a modern version of Bash.
 brew install bash
-brew install bash-completion2
+brew install bash-completion@2
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
@@ -101,12 +101,12 @@ brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask menubar-countdown
-brew install --cask yujitach-menumeters
+brew install --cask menumeters
 brew install --cask itsycal
 brew install --cask provisioning
 brew install --cask slack
 brew install --cask sourcetree
-brew install --cask sublime-text3
+brew install --cask sublime-text
 
 # Remove outdated versions from the cellar.
 brew cleanup
