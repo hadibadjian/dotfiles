@@ -67,7 +67,7 @@ brew install woff2
 # brew install john
 # brew install knock
 # brew install netpbm
-brew install nmap
+# brew install nmap
 # brew install pngcheck
 # brew install socat
 # brew install sqlmap
@@ -85,28 +85,28 @@ brew install git
 brew install git-lfs
 brew install gs
 # brew install imagemagick --with-webp
-brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rlwrap
+# brew install lua
+# brew install lynx
+# brew install p7zip
+# brew install pigz
+# brew install pv
+# brew install rename
+# brew install rlwrap
 brew install ssh-copy-id
 brew install tree
 
-brew install --cask atom
-brew install --cask charles
+# brew install --cask atom
+# brew install --cask charles
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask iterm2
 brew install --cask menubar-countdown
 brew install --cask menumeters
 brew install --cask itsycal
-brew install --cask provisioning
-brew install --cask slack
-brew install --cask sourcetree
-brew install --cask sublime-text
+# brew install --cask provisioning
+# brew install --cask slack
+# brew install --cask sourcetree
+# brew install --cask sublime-text
 
 # Remove outdated versions from the cellar.
 brew cleanup
